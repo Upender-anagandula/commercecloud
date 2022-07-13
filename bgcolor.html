@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Bg Color</title>
+
+</head>
+<body>
+   <div id="parent">
+       <button class="yellow" id="1">One</button>
+       <button class="green" id="2">two</button>
+       <button class="red" id="3">three</button>
+       <button class="purple" id="4">four</button>
+   </div> 
+    <a href="http://freefeast.info/tutorials-for-beginners/jquery_tutorials_for_beginners/change-the-default-behaviour-of-anchor-tag/">Click me</a>
+   <script>
+       function changeColor(e){
+           if(e.target!==e.currentTarget){
+              var clickedItem=document.getElementById(e.target.id);
+               var clr= e.target.classList[0];
+            console.log(e);
+           clickedItem.style.backgroundColor=clr;
+           document.getElementById(e.target.id).setAttribute("disabled","disabled");
+           }
+           
+       }
+ 
+      var parent = document.querySelector("#parent");
+      parent.addEventListener('click',changeColor,false);
+      $( document ).ready(function() {
+    $( "a" ).click(function( event ) {
+    alert( "Thanks for visiting this site" );
+    event.preventDefault();
+    });
+    });
+   </script>
+</body>
+</html>

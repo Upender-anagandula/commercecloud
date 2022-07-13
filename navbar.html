@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Yuji+Syuku&display=swap" rel="stylesheet">
+     <style>
+
+        *{
+            margin:0;
+        }
+         header {
+            width:100%;
+            height:100px;
+            padding-left:60px;
+            padding-right:60px;
+            background-color: black; 
+            position: fixed;
+            display:flex;
+            justify-content: space-between;
+            }
+            .log {
+               padding:30px; 
+               text-decoration: none;           
+            }
+            .log h1{
+                color:rgb(226, 226, 226);
+                flex-direction: row;
+                font-family: 'Yuji Syuku', serif;
+
+            }
+
+           .nav-links {
+              
+           }
+           .nav-links nav {
+               padding:30px;
+           }       
+            nav ul {
+                list-style: none;
+              padding-top:20px;
+              padding-right:100px;
+            }
+            nav ul li {
+               display:inline-block;
+              padding:0 30px;
+             }
+
+            nav ul li a {
+                text-decoration: none;
+                color:rgb(226, 226, 226);
+                font-size: 15px;
+                font-family:'Yuji Syuku', serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                transition: 0.3s;
+            }  
+            nav ul li ::after{
+                content:'';
+                width:0;
+                height:1px;
+                display: block;
+                margin:auto;
+                background-color:  rgb(226, 226, 226);
+                transition: 0.3s;
+             }     
+             nav ul li:hover ::after {
+                 width:100%;
+             }
+
+            .banner-image {
+                background:linear-gradient(rgba(131, 89, 89, 0.3), rgba(185, 140, 140, 0.9)),url(/images/uk.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
+                height:600px;
+                width:100%;
+                      }
+            .banner-text{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+            }
+             .banner-text p {
+                color:rgb(0, 0, 0);
+                padding-top:30px;
+                font-size: 40px;
+                font-family:'Calligraffitti', cursive;
+                font-weight: 900;
+                
+            }
+            .banner-text a {
+                text-decoration: none;
+                color:rgb(0, 0, 0);
+                 padding:8px 32px;
+                border:1px solid black;
+                background: transparent;
+                font-weight:500;
+                position: relative;
+            }
+            .banner-text:hover  a{
+                background-color: rgb(230, 214, 214);
+            }
+            .close {
+               display:none;
+            }
+
+            @media (max-width:600px){
+                header {
+                    padding:0;
+                }
+                .nav-links {
+                    right: 0;
+                    top:0;
+                    height: 100vh;
+                    width:150px;
+                    background-color: blueviolet;
+                    transition: 0.6s linear;
+                }
+                nav ul {
+                    padding:0 10px;;
+                    display: block;
+                }
+                nav ul li {
+                    padding:10px 0;
+                }
+                nav {
+                    padding:0;
+                }
+                .log {
+                    display: inline;
+                }
+                .log h1 {
+                    font-size:13px;
+                  display: inline;
+                }
+               .nav-links .close {
+                   display: inline;
+                    top:5px;
+                    left:10px;
+                }
+            }
+           
+    </style>
+</head>
+<body>
+    <header id="nav-head">
+     <a  class="log"><h1 class="nav-logo">T A T C H A<span>,,</span></h1></a>
+     <div class="nav-links" id="navLinks">
+      <nav>
+          <span class="close" onclick="closeMenu()">X</span>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </nav>
+     </div>
+    </header>
+<div class="banner-image">
+    <div class="banner-text">
+    <p>Buitl Your Website with Latest Upadate</p>
+    <a href="#">GET START</a>
+</div>
+</div>
+<div class="tech-details">
+    <h1>Technologies</h1>
+    <p>Experts in building Mobile App applications.</p>
+    <div class="tech-details-in">
+        <div class="tech-col">
+            <h4>ANDROID APPLICATION DEVELOPMENT</h4>
+            <p>The popularity in the market and worldwide reach makes android apps an excellent choice for your
+                business. Techpearl is known for developing stunning user interfaces (UI/UX), swift loading time,
+                and consistent performance</p>
+        </div>
+        <div class="tech-col">
+            <h4>IOS APPLICATION DEVELOPMENT</h4>
+            <p>iOS applications are known for setting new benchmarks in the mobile app development industry. A fresh
+                idea with a simple interface is what iOS apps are all about. Techpearl’s resourceful iPhone app
+                development team is the right choice for you.
+            </p>
+        </div>
+        <div class="tech-col">
+            <h4>IONIC APP DEVELOPMENT</h4>
+            <p>Ionic Framework has established an iconic position in the application development industry,
+                developing a variety of cross-platform applications supported by Android, iOS, Windows, Blackberry
+                and various other OS</p>
+        </div>
+    </div>
+</div>
+<script>
+    var navhead = document.getElementById("nav-head");
+    window.addEventListener('scroll', () => {
+          var a=this.scrollY;
+          console.log(a);
+        if(a<=100){
+            navhead.style.backgroundColor='black'; 
+        }
+        else {
+         navhead.style.backgroundColor='blue';
+        } 
+       });
+
+       function closeMenu(){
+            var navLinks = document.getElementById("navLinks")
+           navLinks.style.width='0';
+        }
+        var navlogo=document.getElementsByClassName("logo")
+        navlog.addEventListener('click',()=>{           
+            var navLinks = document.getElementById("navLinks");
+           navLinks.style.width='150px';
+        })
+</script>
+</body>
+</html>
