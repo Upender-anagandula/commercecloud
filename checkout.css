@@ -1,0 +1,330 @@
+*{
+    margin:0
+}
+body {
+    font-family: 'minion-pro',serif !important;
+}
+
+header {
+    max-height: 75px;
+    border-bottom: 1px solid #9ea7b0;
+    position: relative;
+}
+.brand-image {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.arrow-icon {
+    float:left;
+    color:#9ea7b0;
+}
+.arrow-icon a {
+    text-decoration: none;
+    color:#9ea7b0;
+}
+.arrow-icon a:hover {
+    color:#9ea7b0;
+}
+.icon-arrow {
+    margin-right: 7px;
+}
+.container{
+    max-width: 53.3rem !important;
+}
+.accordion-item{
+    border:none !important;
+}
+.checkout-main {
+    position:relative;
+}
+/* ********************************************Checkout section*********************************** */
+.checkout-heading {
+    /* margin-top: 2.5rem; */
+    margin-bottom: 1.938rem;
+    font-size: 1.75rem;
+    font-family: minion-pro,serif;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.checkout-section {
+    margin-top:2.5rem;
+}
+
+.card {
+    border:none !important;
+}
+.accordion-item {
+    border-bottom: 1px solid black !important;
+}
+.accordion-item .accordion-head {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 18px;
+}
+.disabled {
+    opacity: 0.5 !important;
+}
+.edit-shipping,.edit-payment {
+    text-decoration: none;
+    color:rgb(34, 25, 25);
+}
+.delivery-info,.delivery {
+    margin-top: 1rem !important;
+    font-weight: 600;
+}
+
+.delivery-container {
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    border-radius: 0.23rem;
+    }
+.shipping-method-list {
+    align-items: center;  
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+}
+.shipping-method-list:last-child {
+border-bottom: none;
+}
+.dot-selector {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #bfb1b1;
+    margin-right:1rem;
+}
+ .selected .dot-selector {
+    border:2px solid #000;
+    position: relative;
+}
+ .selected .dot-selector::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.shipping-address .mt-4{
+    margin-top: 2.2rem !important;
+}
+ input::placeholder {
+    opacity: 0 !important;
+ }
+div.form-row {
+    position:relative;
+    margin-bottom: 1rem !important;
+}
+ label {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    font-size: 14px;
+    cursor:text;
+}
+label:focus {
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    font-size: 10px;
+}
+
+input:focus + label,
+input:active + label {
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    font-size: 10px;
+}
+input:not(:placeholder-shown) + label {
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    font-size: 10px;
+
+}
+
+.form-control-lg {
+    font-size: 1rem !important;
+    padding: 12px 13px 5px 16px !important;
+}
+.form-control:focus {
+   box-shadow: 0 0 0 0.25rem #0d6efd !important;
+   outline: 0;
+}
+/* *******************************payment section************************** */
+.credit-payment {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 0.3rem; 
+  
+}
+.credit-payment span {
+    margin-right: 5px;
+}
+.hint-text {
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.payment-form input::placeholder {
+    opacity: 1 !important;
+    font-weight: 100 !important;
+}
+.payment-form .form-control-lg {
+    padding:0.5rem 1rem !important;
+    font-size:0.9rem !important;
+}
+.payment-button ,
+.shipping-button,
+.placeorder-button {
+    background-color: black !important;
+    text-transform: uppercase;
+    border: unset !important;
+    letter-spacing: 1px;
+}
+.card-heading ,
+.billing-heading {
+    font-weight: 600;
+}
+.payment-details img {
+    width:41px;
+    height: 38px;
+    background: transparent;
+}
+/* ********************************place order section********************************** */
+.placeorder-button  img {
+     margin-right: 6px;
+     width:20px;
+     padding-bottom: 4px;
+}
+/* /*********************************Order Summary*********************************** */
+
+.checkout-order-summary {
+     background-color: #efeff3;
+    margin-top: 2.375rem;
+}
+.order-summary-heading {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 600;
+    background:#e3e3e7;
+    border-bottom:1px solid #e3e3e7;    
+}
+.product-items {
+    padding: 1rem 1rem;
+    background: #efeff3;
+}
+.product-item {
+    display: flex;
+    margin: 1.2rem 0;
+}
+.product-img {
+    margin-right: 13px;
+}
+.product-img img {
+    width:80px;
+}
+.product-details {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+.product-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.product-size,
+.product-qty,
+.separator {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.separator {
+    margin:0 8px;
+}
+.promo-container {
+ /* margin:0 1rem;
+border-top: 1px solid black;
+border-bottom: 1px solid black; */
+position:relative;
+ background: #efeff3; 
+}
+.promo-code-form {
+    margin: 0 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding:15px 0;
+}
+.promo-group {
+  
+}
+.success-message {
+    
+}
+.checkout-promo-form {
+    position:relative;
+}
+
+.promo-container label {
+    position: absolute;
+    top: 8px;
+    font-size: 16px;
+    cursor: text;
+}
+.promo-container input:focus + .fly-checkout-label {
+    position: absolute;
+    top: 4px;
+}
+.promo-container input:not(:placeholder-shown) + .fly-checkout-label {
+    position: absolute;
+    top: 4px;
+    font-size: 10px;
+    transform: none;  
+}
+.apply-btn {
+    height: 43px;
+    margin-left: 6px;
+    background-color: #564e4e !important;
+    color: #fff !important;
+}
+.promo-container .form-row {
+    margin-bottom: 0 !important;
+}
+.success-message {
+    padding-top: 5px;
+    color: rgba(0,130,0,1);
+}
+.success-message img {
+    width:20px;
+    margin-right: 0.2rem;
+}
+.order-summary {
+    background: #efeff3;
+    padding: 1rem 1rem;
+}
+hr {
+    opacity: 1 !important;
+}
+
+
+/* *******************************Footer *************************************** */
+.footer-checkout {
+    width: 100%;
+    background: black;
+    margin-top: 1rem;
+}
+
+.footer-checkout img {
+    width:123px;
+}
